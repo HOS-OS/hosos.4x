@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://openbox.org/
+                file:///usr/share/openbox/menu.xsd">
+
+<menu id="root-menu" label="Openbox 3">
+  <item label="Terminal">
+    <action name="Execute"><execute>x-terminal-emulator</execute></action>
+  </item>
+  <item label="Web Browser">
+    <action name="Execute"><execute>x-www-browser</execute></action>
+  </item>
+
+
+
+  <!-- This requires the presence of the 'obamenu' package to work -->
+  <menu id="/Debian" />
+
+  <menu id="applications-menu" label="Applications" execute="/usr/bin/obamenu"/>
+  <separator />
+  
+  <menu id="openbox-menu" label="New Item ">
+  
+  <item label=" New Folder">
+    <action name="Execute"><execute>mkdir ./Desktop/Unnamed\ Folder
+</execute></action>
+  </item>
+  <item label=" New Empty File">
+    <action name="Execute"><execute>gedit ./Desktop/Unnamed\ file
+
+</execute></action>
+  </item>
+  
+</menu>
+<separator />
+   
+  <item label="Desktop background">
+    <action name="Execute"><execute>/etc/xdg/openbox/Lightdmwall.sh</execute></action>
+  </item>
+  
+   <item label="screen brightness">
+    <action name="Execute"><execute>/usr/share/brightness-controller/init.py</execute></action>
+  </item>
+  
+  <item label="Refresh Desktop">
+    <action name="Restart" />
+  </item>
+  <separator />
+  <item label="Log Out">
+    <action name="Exit" />
+  </item>
+</menu>
+
+</openbox_menu>
