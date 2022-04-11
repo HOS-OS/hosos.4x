@@ -1,0 +1,2 @@
+## sudo dpkg-reconfigure tzdata
+## do this to update time and date  
